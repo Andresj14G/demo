@@ -1,0 +1,29 @@
+:root{--bg:#f3f6f8;--panel:#fff;--ink:#12303d;--mute:#5d7480;--line:#d3dee4;--accent:#0b7a8f;--a:#c2410c;--b:#0b7a8f;--sea:#e6f0f4;--grat:#c4d4dc;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1a21;--panel:#14262f;--ink:#e3eef2;--mute:#8fa8b3;--line:#27404c;--accent:#4fc3d8;--a:#fb923c;--b:#4fc3d8;--sea:#10212a;--grat:#27404c;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0d1a21;--panel:#14262f;--ink:#e3eef2;--mute:#8fa8b3;--line:#27404c;--accent:#4fc3d8;--a:#fb923c;--b:#4fc3d8;--sea:#10212a;--grat:#27404c;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:1000px;margin:0 auto;padding:24px 16px 40px}
+h1{font:600 1.7rem/1.2 Georgia,"Times New Roman",serif;margin:0 0 4px}
+.sub{color:var(--mute);margin:0 0 20px}
+.grid{display:grid;grid-template-columns:320px 1fr;gap:16px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px}
+fieldset{border:0;margin:0 0 14px;padding:0}
+legend{font-weight:600;padding:0;margin-bottom:6px}
+legend.a{color:var(--a)}legend.b{color:var(--b)}
+label{display:block;font-size:.85rem;color:var(--mute);margin-top:6px}
+input,select{width:100%;padding:8px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink);font:inherit}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.err{color:var(--a);font-size:.85rem;min-height:1.2em;margin:0}
+svg{width:100%;height:auto;display:block;border-radius:6px;background:var(--sea)}
+.wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;margin-top:14px;font-size:.92rem}
+th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
+td.n{text-align:right;font-variant-numeric:tabular-nums}
+th.n{text-align:right}
+.kv{display:flex;flex-wrap:wrap;gap:6px 24px;margin-top:12px;font-size:.92rem}
+.kv b{font-variant-numeric:tabular-nums}
+code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.85rem;color:var(--mute)}
